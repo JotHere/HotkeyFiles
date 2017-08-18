@@ -1,0 +1,19 @@
+# Type left curly quote
+"actexec -Q leftquote.ascr"
+    m:0x0 + c:34
+#   bracketleft
+
+# Type right curly quote
+"actexec -Q rightquote.ascr"
+    m:0x0 + c:35
+#   bracketright
+
+# Type left bracket
+"actexec -Q leftbracket.ascr"
+    m:0x4 + c:34
+#   Control + bracketleft
+
+# Type right bracket
+"actexec -Q rightbracket.ascr"
+    m:0x4 + c:35
+#   Control + bracketright
