@@ -1,0 +1,70 @@
+! Temporarily unbind modifier keys (necessary for next steps)
+clear shift
+clear lock
+clear control
+
+! From https://wiki.archlinux.org/index.php/xmodmap
+! Map Caps Lock to Control,
+!     Left Shift + Caps Lock to Caps Lock
+add control = Caps_Lock Control_L Control_R
+keycode 66 = Control_L Caps_Lock NoSymbol NoSymbol
+
+! Based on https://superuser.com/a/492661
+! Map `[` to left single quote (‘),
+!     Right Shift + `[` to literal [,
+!     `]` to right single quote (’),
+!     Right Shift + `]` to literal ]
+keycode 34 = U2018 braceleft bracketleft braceleft
+keycode 35 = U2019 braceright bracketright braceright
+
+! Map other keys to restore normal Right Shift function
+keycode  10 = 1 exclam exclam exclam
+keycode  11 = 2 at at at
+keycode  12 = 3 numbersign numbersign numbersign
+keycode  13 = 4 dollar dollar dollar
+keycode  14 = 5 percent percent percent
+keycode  15 = 6 asciicircum asciicircum asciicircum
+keycode  16 = 7 ampersand ampersand ampersand
+keycode  17 = 8 asterisk asterisk asterisk
+keycode  18 = 9 parenleft parenleft parenleft
+keycode  19 = 0 parenright parenright parenright
+keycode  20 = minus underscore underscore underscore
+keycode  21 = equal plus plus plus
+keycode  24 = q Q Q Q
+keycode  25 = w W W W
+keycode  26 = e E E E
+keycode  27 = r R R R
+keycode  28 = t T T T
+keycode  29 = y Y Y Y
+keycode  30 = u U U U
+keycode  31 = i I I I
+keycode  32 = o O O O
+keycode  33 = p P P P
+keycode  38 = a A A A
+keycode  39 = s S S S
+keycode  40 = d D D D
+keycode  41 = f F F F
+keycode  42 = g G G G
+keycode  43 = h H H H
+keycode  44 = j J J J
+keycode  45 = k K K K
+keycode  46 = l L L L
+keycode  47 = semicolon colon colon colon
+keycode  48 = apostrophe quotedbl quotedbl quotedbl
+keycode  49 = grave asciitilde asciitilde asciitilde
+keycode  51 = backslash bar bar bar
+keycode  52 = z Z Z Z
+keycode  53 = x X X X
+keycode  54 = c C C C
+keycode  55 = v V V V
+keycode  56 = b B B B
+keycode  57 = n N N N
+keycode  58 = m M M M
+keycode  59 = comma less less less
+keycode  60 = period greater greater greater
+keycode  61 = slash question question question
+
+! From https://superuser.com/a/492661
+! Map Right Shift to control column #3 in above bindings
+keysym Shift_R = Mode_switch
+add Shift = Shift_L
